@@ -11,7 +11,7 @@ namespace BinomialSums
 open Finset
 
 /-- **Pascal's rule.** -/
-theorem pascal (n k : ℕ) : (n + 1).choose (k + 1) = n.choose k + n.choose (k + 1) := by
-  sorry
+theorem pascal (n k : ℕ) : (n + 1).choose (k + 1) = n.choose k + n.choose (k + 1) :=
+  Nat.choose_succ_succ n k
 
 end BinomialSums

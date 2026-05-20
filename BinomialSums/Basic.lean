@@ -15,7 +15,7 @@ theorem pascal (n k : ℕ) : (n + 1).choose (k + 1) = n.choose k + n.choose (k +
   Nat.choose_succ_succ n k
 
 /-- Symmetry of the binomial coefficients. -/
-theorem choose_symm_sub {n k : ℕ} (h : k ≤ n) : n.choose (n - k) = n.choose k := by
-  sorry
+theorem choose_symm_sub {n k : ℕ} (h : k ≤ n) : n.choose (n - k) = n.choose k :=
+  Nat.choose_symm h
 
 end BinomialSums

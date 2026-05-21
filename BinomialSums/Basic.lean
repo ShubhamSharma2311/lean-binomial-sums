@@ -18,4 +18,8 @@ theorem pascal (n k : ℕ) : (n + 1).choose (k + 1) = n.choose k + n.choose (k +
 theorem choose_symm_sub {n k : ℕ} (h : k ≤ n) : n.choose (n - k) = n.choose k :=
   Nat.choose_symm h
 
+/-- The `n`-th row of Pascal's triangle sums to `2ⁿ`. -/
+theorem sum_choose (n : ℕ) : ∑ k ∈ range (n + 1), n.choose k = 2 ^ n := by
+  sorry
+
 end BinomialSums

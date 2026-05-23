@@ -26,6 +26,8 @@ theorem sum_choose (n : ℕ) : ∑ k ∈ range (n + 1), n.choose k = 2 ^ n := by
 /-- The alternating sum of a row vanishes for `0 < n`. -/
 theorem alternating_sum_choose {n : ℕ} (hn : 0 < n) :
     ∑ k ∈ range (n + 1), (-1 : ℤ) ^ k * n.choose k = 0 := by
-  sorry
+  have h := (add_pow (-1 : ℤ) 1 n).symm
+  simp only [one_pow, mul_one, neg_add_cancel, zero_pow hn.ne'] at h
+  exact h
 
 end BinomialSums
